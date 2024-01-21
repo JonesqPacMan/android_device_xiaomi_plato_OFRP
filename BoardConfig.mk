@@ -154,8 +154,6 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_plato
 # TWRP Configurations
 TW_FRAMERATE := 60
 TW_STATUS_ICONS_ALIGN := center
-TW_Y_OFFSET := 87
-TW_H_OFFSET := -87
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 400
