@@ -1,4 +1,4 @@
-### TWRP device tree for Xiaomi 12T (plato)
+### OFRP device tree for Xiaomi 12T (plato)
 
 =========================================
 
@@ -34,32 +34,3 @@ Works:
 - [X] Sideload
 - [X] USB OTG
 - [X] Vibrator
-
-## Compile
-
-First checkout minimal twrp with aosp tree:
-
-```
-repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
-repo sync -j$(nproc --all)
-```
-
-Then add these projects to .repo/manifest.xml:
-
-```xml
-<project path="device/xiaomi/plato" name="JonesqPacMan/android_device_xiaomi_plato_TWRP" remote="github" revision="TWRP-12.1_A14-HyperOS" />
-```
-
-Finally execute these:
-
-```
-source build/envsetup.sh
-repopick <needed patch>
-lunch twrp_plato-eng
-mka vendorbootimage -j$(nproc --all)
-```
-## To use it:
-
-```
-fastboot flash vendor_boot twrp-3.7.0-12.1_A14-HyperOS-vendor_boot-plato.img
-```
